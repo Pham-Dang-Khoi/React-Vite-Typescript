@@ -7,6 +7,7 @@ import {
 import { Layout } from "antd";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router";
+import Logo from "@/app/components/Logo";
 
 const Sidebar = () => {
   const location = useLocation();
@@ -55,9 +56,8 @@ const Sidebar = () => {
       className="!bg-white pt-4"
       width={250}
     >
-      <div className="px-6 mb-6 flex justify-start items-center">
-        <img src="https://vawr.vn/images/logo-google.png" alt="Logo" className="h-10" />
-        <p className="font-bold text-xl">Logo</p>
+      <div className="px-6 mb-6 flex justify-between items-center">
+        <Logo collapsed={isCollapsed} className="!text-black" />
       </div>
       <Menu
         className="mt-4 px-2 bg-white"
